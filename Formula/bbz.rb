@@ -1,28 +1,28 @@
 class Bbz < Formula
   desc "Run 6502 programs using the Acorn MOS on a modern operating system as a console application"
   homepage "https://github.com/ivanizag/bbz"
-  version "0.9"
+  version "1.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/ivanizag/bbz/releases/download/v0.9/bbz_Darwin_arm64.tar.gz"
-      sha256 "73e981d25710e65edac35a8e4a3dc5251752b6cf341ca1ff9346d7d398878fc1"
+      url "https://github.com/ivanizag/bbz/releases/download/v1.0/bbz_Darwin_arm64.tar.gz"
+      sha256 "69d21928da392053999c1edfcdd2984645d656561c67dd00657cd668c9ba1d19"
     end
     on_intel do
-      url "https://github.com/ivanizag/bbz/releases/download/v0.9/bbz_Darwin_x86_64.tar.gz"
-      sha256 "01383307fd75e5ca8722cbc8e93fabc2439f200a88b4ea26c766334e1cd265cb"
+      url "https://github.com/ivanizag/bbz/releases/download/v1.0/bbz_Darwin_x86_64.tar.gz"
+      sha256 "47ae99a2aae9f0aa1e39eb45a8c560a7e330795a67f1597c4397eaacda110d7a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ivanizag/bbz/releases/download/v0.9/bbz_Linux_arm64.tar.gz"
-      sha256 "ef4b86458d4264232386452d5aca4329ab503ff1367d32f886e51af547d9a86f"
+      url "https://github.com/ivanizag/bbz/releases/download/v1.0/bbz_Linux_arm64.tar.gz"
+      sha256 "e2982af025b991a5183a82cd39ccc7ab5e9a1860446c1f84a8723ca2f71a7741"
     end
     on_intel do
-      url "https://github.com/ivanizag/bbz/releases/download/v0.9/bbz_Linux_x86_64.tar.gz"
-      sha256 "37b2e241beb707178d754538c55f6a45c8446dd3b0db5d4392693d8a54055170"
+      url "https://github.com/ivanizag/bbz/releases/download/v1.0/bbz_Linux_x86_64.tar.gz"
+      sha256 "9669c166c0c521462f483d6d6bc42a3a4352d052dfdc5334d7b44ea1b3f31115"
     end
   end
 
