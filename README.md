@@ -1,5 +1,11 @@
 # Homebrew tap for ivanizag tools
 
+## [bbz](https://github.com/ivanizag/bbz)
+
+```shell
+brew install ivanizag/tap/bbz
+```
+
 ## [iz-cpm](https://github.com/ivanizag/iz-cpm)
 
 ```shell
