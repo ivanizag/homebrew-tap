@@ -18,6 +18,12 @@ brew install ivanizag/tap/iz-cpm
 brew install ivanizag/tap/izapple2
 ```
 
+## [izapplebasic](https://github.com/ivanizag/izapplebasic)
+
+```shell
+brew install ivanizag/tap/izapplebasic
+```
+
 Each formula is updated automatically when a new release of its project is
 published, or manually with the matching `./update-<formula>.sh <version>`
 script.
