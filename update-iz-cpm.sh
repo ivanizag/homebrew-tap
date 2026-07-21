@@ -12,7 +12,15 @@ fi
 base="https://github.com/ivanizag/iz-cpm/releases/download/v$version"
 
 sha() {
-    curl -sfL "$base/iz-cpm-$1-v$version.tar.gz" | shasum -a 256 | cut -d' ' -f1
+    local tmp
+    tmp=$(mktemp)
+    if ! curl -sfL "$base/iz-cpm-$1-v$version.tar.gz" -o "$tmp"; then
+        rm -f "$tmp"
+        echo "Cannot download iz-cpm-$1-v$version.tar.gz from $base" >&2
+        exit 1
+    fi
+    shasum -a 256 "$tmp" | cut -d' ' -f1
+    rm -f "$tmp"
 }
 
 sha_arm=$(sha macos-arm64)

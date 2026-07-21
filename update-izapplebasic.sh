@@ -12,7 +12,15 @@ fi
 base="https://github.com/ivanizag/izapplebasic/releases/download/v$version"
 
 sha() {
-    curl -sfL "$base/izapplebasic_$1.tar.gz" | shasum -a 256 | cut -d' ' -f1
+    local tmp
+    tmp=$(mktemp)
+    if ! curl -sfL "$base/izapplebasic_$1.tar.gz" -o "$tmp"; then
+        rm -f "$tmp"
+        echo "Cannot download izapplebasic_$1.tar.gz from $base" >&2
+        exit 1
+    fi
+    shasum -a 256 "$tmp" | cut -d' ' -f1
+    rm -f "$tmp"
 }
 
 sha_mac_arm=$(sha Darwin_arm64)

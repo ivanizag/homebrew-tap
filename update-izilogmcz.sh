@@ -14,12 +14,13 @@ base="https://github.com/ivanizag/izilogmcz/releases/download/v$version"
 sha() {
     local tmp
     tmp=$(mktemp)
-    trap 'rm -f "$tmp"' RETURN
     if ! curl -sfL "$base/izilogmcz-$1-v$version.tar.gz" -o "$tmp"; then
+        rm -f "$tmp"
         echo "Cannot download izilogmcz-$1-v$version.tar.gz from $base" >&2
         exit 1
     fi
     shasum -a 256 "$tmp" | cut -d' ' -f1
+    rm -f "$tmp"
 }
 
 sha_arm=$(sha macos-arm64)

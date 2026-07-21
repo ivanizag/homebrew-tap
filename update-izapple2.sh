@@ -11,7 +11,19 @@ if [ -z "$version" ]; then
 fi
 base="https://github.com/ivanizag/izapple2/releases/download/v$version"
 
-sha=$(curl -sfL "$base/izapple2-macos-universal.tar.gz" | shasum -a 256 | cut -d' ' -f1)
+sha() {
+    local tmp
+    tmp=$(mktemp)
+    if ! curl -sfL "$base/izapple2-macos-universal.tar.gz" -o "$tmp"; then
+        rm -f "$tmp"
+        echo "Cannot download izapple2-macos-universal.tar.gz from $base" >&2
+        exit 1
+    fi
+    shasum -a 256 "$tmp" | cut -d' ' -f1
+    rm -f "$tmp"
+}
+
+sha=$(sha)
 
 cat > Formula/izapple2.rb <<EOF
 class Izapple2 < Formula
