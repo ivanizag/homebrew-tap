@@ -1,8 +1,8 @@
 class Izmac < Formula
   desc "Macintosh Plus emulator"
   homepage "https://github.com/ivanizag/izmac"
-  url "https://github.com/ivanizag/izmac/releases/download/v1.0.0/izmac-macos-universal.tar.gz"
-  sha256 "c40a4c4dabfc46bd0698ab64c1ca24babdc472c82f5c0c11ffd86ec262abf8d1"
+  url "https://github.com/ivanizag/izmac/releases/download/v1.1.0/izmac-macos-universal.tar.gz"
+  sha256 "ecc259bfdeca8162a09a0679e0aa81d3934bd3e48b210e4613190d4b9f38d2e5"
   license "MIT"
 
   def install
