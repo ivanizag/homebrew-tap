@@ -1,8 +1,8 @@
 class Izapple2 < Formula
   desc "Apple ][+ and //e emulator"
   homepage "https://github.com/ivanizag/izapple2"
-  url "https://github.com/ivanizag/izapple2/releases/download/v2.4.0/izapple2-macos-universal.tar.gz"
-  sha256 "d3c0eba5021bbe1b1ff3ae4b98749169b41db6bc7cf14835b6a249fdf15e190d"
+  url "https://github.com/ivanizag/izapple2/releases/download/v2.5.0/izapple2-macos-universal.tar.gz"
+  sha256 "114774f94d881e889bb779cefb7e1af4e54205c2dbd4e4bb3a6cac4b41a33c94"
   license "GPL-3.0-only"
 
   def install
