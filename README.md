@@ -42,6 +42,13 @@ Macintosh Plus emulator
 brew install ivanizag/tap/izmac
 ```
 
+## [izpet](https://github.com/ivanizag/izpet)
+Commodore PET emulator
+
+```shell
+brew install ivanizag/tap/izpet
+```
+
 Each formula is updated automatically when a new release of its project is
 published, or manually with the matching `./update-<formula>.sh <version>`
 script.
